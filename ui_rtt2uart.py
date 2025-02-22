@@ -26,6 +26,7 @@ class Ui_dialog(object):
         dialog.resize(402, 345)
         dialog.setMinimumSize(QSize(402, 300))
         dialog.setMaximumSize(QSize(402, 345))
+        dialog.setWindowFlags(dialog.windowFlags() | Qt.WindowMinimizeButtonHint)
         dialog.setSizeGripEnabled(False)
         self.pushButton_Start = QPushButton(dialog)
         self.pushButton_Start.setObjectName(u"pushButton_Start")

@@ -31,7 +31,7 @@ speed_list = [5, 10, 20, 30, 50, 100, 200, 300, 400, 500, 600, 750,
               15000, 20000, 25000, 30000, 40000, 50000]
 
 baudrate_list = [50, 75, 110, 134, 150, 200, 300, 600, 1200, 1800, 2400, 4800,
-                 9600, 19200, 38400, 57600, 115200, 230400, 460800, 500000, 576000, 921600]
+                 9600, 19200, 38400, 57600, 115200, 230400, 460800, 500000, 576000, 921600, 1500000, 6000000]
 
 
 class DeviceTableModel(QtCore.QAbstractTableModel):
@@ -196,6 +196,8 @@ class MainWindow(QDialog):
 
         for i in range(len(baudrate_list)):
             self.ui.comboBox_baudrate.addItem(str(baudrate_list[i]))
+        # 设置波特率下拉框为可编辑
+        self.ui.comboBox_baudrate.setEditable(True)
 
         self.port_scan()
 
